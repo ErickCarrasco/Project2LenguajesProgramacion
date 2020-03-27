@@ -1,14 +1,24 @@
-;Ejercicio #4
-(define (derivada list1 list2)
-        (if (null? list1) list2
-            (cons ( * (-(length list1) 1) (car list1) ) (derivada (cdr list1) list2))))
-
-(define (length lis)
-   (cond ((null? lis)
-          0)
-         (else
-          (+ 1 (length (cdr lis))))))
-
+;ejercicio#4
+(define (deri derivada)
+    (if(= (length derivada) 1)
+    ()
+    (begin
+      (if(= (length derivada) 2)
+        (begin
+        (display (* (car derivada) (- (length derivada) 1)))
+        )
+        (begin
+          (display (* (car derivada) (- (length derivada) 1)))
+          (if(= (length derivada) 3)
+            (display "x")
+            (begin
+            (display "x^")
+            (display (- (length derivada) 2))
+            )
+          )
+          (display " + ")
+        )
+      )
+      (deri (cdr derivada)))))
 ;MAIN
-
-(derivada '(2 1 2 3) '())
+(deri (list 2 -2 5 10))
