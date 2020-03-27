@@ -23,8 +23,4 @@ Por ejemplo
 (2,-2,5,10)  ->  df(x) = 6x^2-4x+5 
 (define f (lambda (a) (lambda (x) (* a x)) )) (define df (f 2))  // df es la funcion f(x) = 2x (df 3) 
 
-Ejercicio #5 
-Dado un árbol definido a través de una lista de la siguiente manera: 
-(3 (6 (14 nil nil) (8 nil nil)) (15 nil (12 (6 nil nil) nil))) 
- 
-1. Implemente una función que recibe una lista con la forma de un árbol e imprima los elementos del árbol en orden. 2. Implemente una función que determine si el árbol es un árbol binario de búsqueda 
+
